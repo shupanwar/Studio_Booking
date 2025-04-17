@@ -72,7 +72,24 @@ photo-studio/
 
 ## 🖼️ Screenshots
 
-(https://github.com/user-attachments/static/Screenshot/Home.png)
+##🎯 Future Improvements
+
+Integrate Razorpay/Stripe for online payments
+
+Add user reviews and ratings
+
+Enable multi-language support
+
+SMS notifications
+
+📝 License
+
+MIT License
+
+🙋‍♂️ Author
+
+Shubham Parmar
+
 
 
 
