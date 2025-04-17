@@ -1,0 +1,585 @@
+:root {
+    --button-color: #f0b016;
+    --secondary-color: #333;
+    --text-color: #333; 
+    --background-color: #f4f4f4;
+    --border-color: #f4f4f4; 
+    --border-radius: 5px; 
+    --transition: 0.3s ease; 
+    --list-style: none;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: peachpuff
+}
+
+        /* Navbar */
+.navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    display: flex;
+    justify-content:center;
+}
+  
+.navbar-brand, .nav-link {
+    color: var(--background-color) !important;
+    list-style: var(--list-style);
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link:hover {
+    color: grey!important;
+    font-size: larger;
+    font-weight: bold;
+}
+.navbar-nav{
+    margin: 0 auto;
+}
+
+.logo-item img {
+    width: 120px; /* Adjust logo size */
+    display: block;
+    margin: 0;
+}
+
+.navbar .logo-item {
+    position: static; 
+    margin-right: auto;
+
+}
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute; /* Fixed position on smaller screens */
+        top: 0; /* Align to the top */
+        background-color: rgba(0, 0, 0, 0.8); /* Darken the background */
+    }
+    .navbar .logo-item {
+        position: absolute; /* Fixed position in the navbar */
+        top: 0px; /* Adjust vertical placement */
+        left: 10px; /* Align the logo to the left */
+        z-index: 10; /* Ensure it stays above other elements */
+        height: 60px;
+        
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Keep the toggle button on the right */
+    }
+    .navbar.nav-item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+    .navbar {
+        position: absolute; /* Fixed position on smaller screens */
+        top: 0; /* Align to the top */
+        background-color: rgba(0, 0, 0, 0.8); /* Darken the background */
+    }
+    .navbar .logo-item {
+        position: absolute; /* Fixed position in the navbar */
+        top: 0px; /* Adjust vertical placement */
+        left: 10px; /* Align the logo to the left */
+        z-index: 10; /* Ensure it stays above other elements */
+        height: 60px;
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Keep the toggle button on the right */
+    }
+    .navbar.nav-item{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+        /* Nav-Image */
+.caption {
+    position:static;
+    height: 90vh;
+    width: 100%;
+    background-image: url('/static/images/Nav/Nav.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+        /* Portfolio */
+.card-container {
+    perspective: 1000px;
+}
+.gallery-card {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    transform-style: preserve-3d;
+    /* transform: rotateY(0); */
+    transition: transform 0.6s;
+}
+.gallery-card:hover {
+    transform: rotateY(180deg);
+    filter: drop-shadow(0 0 1.75rem #9d803c);
+}
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.card-face.back {
+    transform: rotateY(180deg);
+}
+#load-more {
+    padding: 15px 65px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background: var(--button-color);
+    margin: auto;
+    margin-top: 15px;
+    font-size: 15px;
+    filter: drop-shadow(0 0 1.75rem #f0b016);
+}
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    filter: drop-shadow(0 0 1.75rem #f0b016);
+}
+
+@media (max-width: 576px){
+    .card-container {
+        height: 100%;  /* Allow height to adjust on smaller screens */
+    }
+
+    .card {
+        height: 100%;  /* Allow height to adjust */
+    }
+    .card-face{
+        background-size: cover;  /* Make sure image is fully visible */
+        background-position: center;
+    }
+}
+@media (max-width: 768px) {
+    .card {
+        height: 100%;  /* Adjust for tablets/larger phones */
+    }
+}
+        /* Plan */
+.card-body li{
+    list-style: none;
+}  
+.card-body{
+    border-image: linear-gradient(to left, #743ad5, #d53a9d 100%) 1;
+    border-radius: 5px; /* this doesn't work */
+    border-width: 4px;
+    border-style: solid;
+    padding: 5px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background-color: peachpuff;
+}
+
+        /* Booking Section */
+
+.nav-item .dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    /* padding: 40px 0; */
+    background-color: transparent;
+    /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); */
+    z-index: 1;
+    border-radius: 5px;
+}
+.dropdown-menu a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* .Booking-Section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    justify-content: center;
+    align-items: center;
+ } */
+ .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+body.popup-active {
+    overflow: hidden;
+}
+
+.popup-form{
+    background-color: peachpuff;
+    padding: 20px;
+    width: 40%;
+    /* max-width: 400px; */
+    max-height: 95vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);;
+    display: flex;  
+    flex-direction: column;
+}
+@media (max-width: 768px) {    
+    .popup-form {
+        width: 90%;
+        max-width: 400px;
+        max-height: calc(100vh - 50px);
+        height: auto;
+        overflow-y: auto;
+    }
+    body.popup-active {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        overflow: hidden;
+
+    }
+    
+    .popup-overlay {
+        overflow: auto; /* Allows scrolling if needed */
+    }
+    .popup-form h2 {
+        font-size: 20px;
+    }
+    .popup-form input {
+        height:45px;
+        width: 100%;
+        margin: auto;
+    }
+    .popup-form textarea {
+        height: 450px;
+        width: 100%;
+        margin: auto;
+    }
+    .popup-form button {
+        margin-top: 10px;
+        padding: 50px 30px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+.popup-form h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.popup-form input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    /* margin-bottom: 1px; */
+    padding-left: 25px;
+    background-color: #ffffff;
+    outline: none;
+    color: #101010;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.popup-form textarea{
+    border: 1px solid black;
+    height: 80px;
+    margin-bottom: 0Px;
+    padding: 25px 0px 0px 25px;
+    background-color: #ffffff;
+    outline: none;
+    color: #101010;
+    border-radius: 50px;        
+}
+
+.popup-form button {
+    padding: 15px 20px;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background: var(--button-color);
+    margin: auto;
+    margin-top: 5px;
+    font-size: 15px;
+    filter: drop-shadow(0 0 1.75rem #f0b016);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-form button:hover {
+    background-color: #0056b3;
+}
+
+.popup-form .close-btn {
+    background-color: red;
+    float: right;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    /* Service */
+.Service-Section {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+.blur-background img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Adjust the blur level to your preference */
+    z-index: -1; /*Makes sure the background is behind the text */
+}
+.Service-Section .Service-title{
+    color: white;
+}
+
+.Service-Section p {
+    position: relative;
+    color: wheat; /* Ensure text is visible over the blurred background */
+    z-index: 1; /* Keeps text above the blurred background */
+    margin-top: 10px;
+    font: bold;
+    font-size: larger;
+}
+.Service-item {
+    margin-top: 20px;
+    color: white;
+}
+
+        /* CONTACT */
+.Contact-Section {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.contact-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Adjust the blur level to your preference */
+    z-index: -1; /*Makes sure the background is behind the text */
+}
+.Contact-Section .Contact-title{
+    font-weight: bold;
+}
+
+.Contact-Section input{
+    width: 100%;
+    border: 1px solid black;
+    height: 50px;
+    margin-bottom: 5px;
+    padding-left: 25px;
+    background-color: #ffffff;
+    outline: none;
+    color: #101010;
+    border-radius: 50px;
+}
+.Contact-Section textarea{
+    border: 1px solid black;
+    height: 120px;
+    margin-bottom: 5px;
+    padding: 25px 0px 0px 25px;
+    background-color: #ffffff;
+    outline: none;
+    color: #101010;
+    border-radius: 50px;        
+}
+
+.Contact-Section form{
+    padding: 0px 30px 0px 30px;
+}
+
+.Contact-Section button {
+    padding: 15px 65px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background: var(--button-color);
+    margin: auto;
+    margin-top: 15px;
+    font-size: 15px;
+    filter: drop-shadow(0 0 1.75rem #f0b016);
+}
+      
+      /* Footer */
+.footer {
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 10px;
+}
+.fa-facebook,.fa-instagram, .fa-youtube{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    margin: 5px 2px;
+    padding-top: 10px;
+    border:2px solid white;
+    border-radius: 50%;
+}
+
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+
+}
+.fa-instagram{
+    background:linear-gradient(#f9ce34,  #ee2a7b, #6228d7);
+    color: white;
+}
+
+.fa-youtube{
+    background-color: red;
+    color: white;
+}
+.social-icon span {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+        /* Media Query */
+@media (max-width: 768px) {
+    .footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer .row {
+        display: block;
+    }
+    .footer .col-md-6 {
+        margin-bottom: 20px;
+    }    
+}
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px red;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin; /* Auto-hide scrollbar to make it thinner */
+    scrollbar-color: #ff9a9e #fad0c4;
+}
+
+/* Firefox: track and thumb colors */
+*::-moz-scrollbar {
+    width: 20px;
+}
+
+*::-moz-scrollbar-track {
+    box-shadow: inset 0 0 5px red;
+    border-radius: 10px;
+}
+
+*::-moz-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    border-radius: 10px;
+}
+
+*::-moz-scrollbar-thumb:hover {
+    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+

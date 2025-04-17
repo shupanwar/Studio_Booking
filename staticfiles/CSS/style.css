@@ -1,0 +1,360 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: peachpuff;
+    /* background-color: #101010; */
+        
+}
+/* .cursor {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 4px solid goldenrod;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    /* || pointer-events: painted; 
+    transform: translate(-50%, -50%);
+    display: none;
+} */
+.navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+
+}
+  
+.navbar-brand, .nav-link {
+    color: white !important;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+.navbar-nav{
+    margin: 0 auto;
+}
+
+.logo-item img {
+    width: 120px; /* Adjust logo size */
+    display: block;
+    margin: 0;
+}
+
+.navbar .logo-item {
+    position: static; /* Default inline positioning */
+    margin-right: auto; /* Aligns to the left naturally */
+}
+@media (max-width: 768px) {
+    .navbar .logo-item {
+        position: absolute; /* Fixed position in the navbar */
+        top: 0px; /* Adjust vertical placement */
+        left: 10px; /* Align the logo to the left */
+        z-index: 10; /* Ensure it stays above other elements */
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Keep the toggle button on the right */
+    }
+    .navbar-nav {
+        margin-top: 50px; /* Add space for the logo */
+    }
+}
+.caption {
+    position: relative;
+    height: 80vh;
+    background-image: url("{% static 'images/Nav/Nav.JPG' %}") no-repeat center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.caption-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.caption-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.caption-content p {
+    font-size: 1.2rem;
+}
+.card-body li{
+    list-style: none;
+}  
+.card-body{
+    border-image: linear-gradient(to left, #743ad5, #d53a9d 100%) 1;
+    border-radius: 5px; /* this doesn't work */
+    border-width: 4px;
+    border-style: solid;
+    padding: 5px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+.Service-Section {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/004.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Adjust the blur level to your preference */
+    z-index: -1; /*Makes sure the background is behind the text */
+}
+.Service-Section .Service-title{
+    color: white;
+}
+
+.Service-Section p {
+    position: relative;
+    color: wheat; /* Ensure text is visible over the blurred background */
+    z-index: 1; /* Keeps text above the blurred background */
+    margin-top: 10px;
+    font: bold;
+    font-size: larger;
+}
+.Service-item {
+    margin-top: 20px;
+    color: white;
+}
+
+      /* CONTACT */
+.Contact-Section {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(" {% static 'images/Contact/Contact.JPG %}"); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Adjust the blur level to your preference */
+    z-index: -1; /*Makes sure the background is behind the text */
+}
+.Contact-Section .Contact-title{
+    font-weight: bold;
+}
+
+.Contact-Section input{
+    width: 100%;
+    border: 1px solid black;
+    height: 50px;
+    margin-bottom: 5px;
+    padding-left: 25px;
+    background-color: #ffffff;
+    outline: none;
+    color: #101010;
+    border-radius: 50px;
+}
+.Contact-Section textarea{
+    border: 1px solid black;
+    height: 120px;
+    margin-bottom: 5px;
+    padding: 25px 0px 0px 25px;
+    background-color: #ffffff;
+    outline: none;
+    color: #101010;
+    border-radius: 50px;        
+}
+
+.Contact-Section form{
+    padding: 0px 30px 0px 30px;
+}
+
+.Contact-Section button {
+    padding: 15px 65px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background: #f0b016;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 15px;
+}
+      
+      /* Footer */
+.footer {
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 10px;
+}
+.fa-facebook,.fa-instagram, .fa-youtube{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    margin: 5px 2px;
+    padding-top: 10px;
+    border:2px solid white;
+    border-radius: 50%;
+}
+
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+
+}
+.fa-instagram{
+    background:linear-gradient(#f9ce34,  #ee2a7b, #6228d7);
+    color: white;
+}
+
+.fa-youtube{
+    background-color: red;
+    color: white;
+}
+.social-icon span {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer .row {
+        display: block;
+    }
+    .footer .col-md-6 {
+        margin-bottom: 20px;
+    }    
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff5722, #ff8a00);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease;
+    opacity: 0.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
+/* On hover, the button grows slightly and changes color */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: linear-gradient(135deg, #ff8a00, #ff5722);
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect on cards */
+.card:hover {
+    transform: scale(1.60);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel inner container */
+.carousel-inner {
+    overflow: hidden;
+}
+
+/* Responsive design */
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+/* Custom card design */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-body {
+    background: #fff;
+    padding: 15px;
+}
