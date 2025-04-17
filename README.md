@@ -15,14 +15,14 @@ A fully functional Django-based web application for a photo studio. It allows us
 ## 🛠 Tech Stack
 
 - **Backend:** Django (Python)
-- 
+ 
 - **Frontend:** HTML5, CSS3, JavaScript, Bootstrap
-- 
+ 
 - **Database:** SQLite (default, can switch to PostgreSQL/MySQL)
-- 
+   
 - **Other:** Django Admin, Django ORM
 
-- ## 🚀 Getting Started
+## 🚀 Getting Started
 
 1. Clone the Repository
 
@@ -35,7 +35,7 @@ A fully functional Django-based web application for a photo studio. It allows us
    
    python -m venv venv
    
-  source venv/bin/activate 
+   source venv/bin/activate 
 
 3. Install Requirements
    
@@ -58,7 +58,7 @@ photo-studio/
 
 ├── static/
 
-│   └── screenshot/          # Project screenshots
+  └── screenshot/          # Project screenshots
 
 ├── media/                   # Uploaded media files
 
